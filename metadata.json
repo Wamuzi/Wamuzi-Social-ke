@@ -1,0 +1,8 @@
+{
+  "name": "Wamuzi Media App",
+  "description": "An interactive media app with a live radio player, news updates, and an admin dashboard. Powered by Wamuzi Media.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

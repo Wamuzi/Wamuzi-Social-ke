@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://i.ibb.co/6rW81S4/wamuzi-logo-512.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wamuzi Media App</title>
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Wamuzi Social" />
+    <meta property="og:description" content="Join the conversation on Wamuzi Social. Live radio, breaking news, and a vibrant community." />
+    <meta property="og:image" content="https://i.ibb.co/6rW81S4/wamuzi-logo-512.png" />
+    <meta property="og:url" content="https://wamuzi-radio.app" />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': '#0019ff',
+              'brand-dark-blue': '#00008b',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .font-serif-logo {
+            font-family: 'Playfair Display', serif;
+        }
+        @keyframes loading-bar-animation {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(400%); } /* Move across a 4x wide container */
+        }
+        .animate-loading-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 100%;
+            background-color: #0019ff;
+            animation: loading-bar-animation 1.5s infinite linear;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body class="bg-white text-gray-800">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
